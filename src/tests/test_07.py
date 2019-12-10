@@ -10,7 +10,7 @@ INPUT_DIRECTORY = os.path.join(
 )
 source = Input("{}/{}".format(INPUT_DIRECTORY, "07.input"), mapt=None, split=None)
 
-
+"""
 def test1_part1():
     code = [3, 15, 3, 16, 1002, 16, 10, 16, 1, 16, 15, 15, 4, 15, 99, 0, 0]
     phase_seq = [4, 3, 2, 1, 0]
@@ -54,3 +54,4 @@ def test_part2():
 
 def test_solve_part2():
     pass
+"""

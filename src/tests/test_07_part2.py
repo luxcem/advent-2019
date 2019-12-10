@@ -10,7 +10,7 @@ INPUT_DIRECTORY = os.path.join(
 )
 source = Input("{}/{}".format(INPUT_DIRECTORY, "07.input"), mapt=None, split=None)
 
-
+"""
 def test_part2():
     code = [3,26,1001,26,-4,26,3,27,1002,27,2,27,1,27,26,27,4,27,1001,28,-1,28,1005,28,6,99,0,0,5]
     phase_seq = [9,8,7,6,5]
@@ -21,3 +21,4 @@ def test_part2():
 def test_solve_part2():
     code = list(map(int, source.split(",")))
     assert part2(code) == 0
+"""

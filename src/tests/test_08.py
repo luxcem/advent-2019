@@ -15,4 +15,4 @@ def test_solve_part1():
 
 
 def test_solve_part2():
-    assert part2(source) == 0
+    assert part2(source) is None
