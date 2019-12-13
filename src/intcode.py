@@ -29,7 +29,6 @@ class IntCodeComputer:
         while True:
             i += 1
             opcode = self.source[cursor] % 100
-
             opcode_line = str(self.source[cursor]).rjust(5, "0")
             mode1, mode2, mode3 = map(int, opcode_line[-3:-6:-1])
             if opcode == 1:
