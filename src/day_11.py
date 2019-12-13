@@ -12,6 +12,23 @@ problem = Input("{}/{}".format(INPUT_DIRECTORY, "11.input"), mapt=None, split=No
 code = list(map(int, problem.split(","))) + [0] * 1000
 
 
+def print_grid(grid, x=0, y=0, facing=0):
+    facing_list = ["^", ">", "v", "<"]
+    miny = min([a[1] for a in grid.keys()])
+    maxy = max([a[1] for a in grid.keys()]) + 1
+    minx = min([a[0] for a in grid.keys()])
+    maxx = max([a[0] for a in grid.keys()]) + 1
+
+    for i in range(miny, maxy):
+        for j in range(minx, maxx):
+            if not (j, i) in grid:
+                print(".", end="")
+            elif (i, j) == (y, x):
+                print(facing_list[facing], end="")
+            else:
+                print("#" if grid[(j, i)] else ".", end="")
+        print()
+
 
 def robot(inqueue, outqueue):
     grid = {(0, 0): 1}
@@ -42,6 +59,7 @@ def robot(inqueue, outqueue):
         y += dy
 
     print(len(grid))
+    print_grid(grid)
 
 
 def run_code(code, inqueue, outqueue):
