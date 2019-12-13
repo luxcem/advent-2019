@@ -71,3 +71,7 @@ def part2(debug=False):
     computer.run()
     print()
     print_grid(bot.grid)
+
+
+if __name__ == "__main__":
+    part2(debug=True)
